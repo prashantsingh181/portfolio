@@ -1,91 +1,78 @@
-# Magic Portfolio
+# 👨‍💻 Prashant Singh — Frontend Developer Portfolio
 
-Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
+Welcome to my personal portfolio!  
+This site showcases my featured projects, technical expertise, and journey as a **Frontend Developer** passionate about creating scalable, performant, and user-focused web applications.
 
-View the demo [here](https://demo.magic-portfolio.com).
+---
 
-![Magic Portfolio](public/images/og/home.jpg)
+## 🚀 About Me
 
-## Getting started
+Hi, I’m **Prashant Singh**, a Frontend Developer from India.  
+I specialize in building **modern React and Next.js applications** with clean architecture, strong performance, and great user experiences.
 
-**1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
+I enjoy solving real-world problems through code, designing modular systems, and working on projects that bridge design with development.
 
-**2. Install dependencies**
-```
-npm install
-```
+---
 
-**3. Run dev server**
-```
-npm run dev
-```
+## 🧠 Tech Stack
 
-**4. Edit config**
-```
-src/resources/once-ui.config.js
-```
+**Frontend Frameworks:**  
+React.js, Next.js, Vite, TypeScript, JavaScript (ES6+)
 
-**5. Edit content**
-```
-src/resources/content.js
-```
+**Styling & UI:**  
+Tailwind CSS, Styled Components, Material UI, Figma
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
+**State Management:**  
+Redux Toolkit, Context API, TanStack Query (React Query)
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+**Performance & Optimization:**  
+Code Splitting, Lazy Loading, Memoization, Lighthouse Audits
 
-## Documentation
+**Tools & Others:**  
+Git, GitHub, Vercel, ESLint, Prettier, Storybook, Sentry
 
-Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
+---
 
-## Features
+## ⚙️ Setup & Installation
 
-### Once UI
-- All tokens, components & features of [Once UI](https://once-ui.com)
+1. Clone the repository:
 
-### SEO
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+   ```bash
+   git clone https://github.com/your-username/portfolio.git
+   ```
 
-### Design
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+2. Navigate into the project directory:
 
-### Content
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+   ```bash
+   cd portfolio
+   ```
 
-### Localization
-- A localized, earlier version of Magic Portfolio is available with the next-intl library
-- To use localization, switch to the 'i18n' branch
+3. Install dependencies:
 
-## Creators
+   ```bash
+   npm install
+   ```
 
-Lorant One: [Threads](https://www.threads.net/@lorant.one) / [LinkedIn](https://www.linkedin.com/in/lorant-one/)
+4. Run the development server:
 
-## Get involved
+   ```bash
+   npm run dev
+   ```
 
-- Join the Design Engineers Club on [Discord](https://discord.com/invite/5EyAQ4eNdS) and share your project with us!
-- Deployed your docs? Share it on the [Once UI Hub](https://once-ui.com/hub) too! We feature our favorite apps on our landing page.
+5. Open your browser at:
 
-## License
+   ```
+   http://localhost:3000
+   ```
 
-Distributed under the CC BY-NC 4.0 License.
-- Attribution is required.
-- Commercial usage is not allowed.
-- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
+---
 
-See `LICENSE.txt` for more information.
+## 📬 Contact
 
-## Deploy with Vercel
+📧 **Email:** [prashantsingh181@gmail.com](mailto:prashantsingh181@gmail.com)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+🔗 **LinkedIn:** [linkedin.com/in/prashantsingh181](https://www.linkedin.com/in/prashantsingh181/)
+
+💻 **Portfolio:** [prashant-singh-portfolio.vercel.app](https://prashant-singh-portfolio.vercel.app/)
+
+---
