@@ -69,7 +69,7 @@ Git, GitHub, Vercel, ESLint, Prettier, Storybook, Sentry
 
 ## 📬 Contact
 
-📧 **Email:** [prashantsingh181@gmail.com](mailto:prashantsingh181@gmail.com)
+📧 **Email:** [prashant.singh181@gmail.com](mailto:prashant.singh181@gmail.com)
 
 🔗 **LinkedIn:** [linkedin.com/in/prashantsingh181](https://www.linkedin.com/in/prashantsingh181/)
 
