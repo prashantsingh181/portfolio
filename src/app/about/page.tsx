@@ -11,11 +11,13 @@ import {
   Meta,
   Schema,
   Row,
+  Badge,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
+import Link from "next/link";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -45,9 +47,9 @@ export default function About() {
       items: about.studies.institutions.map((institution) => institution.name),
     },
     {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
+      title: about.projects.title,
+      display: about.projects.display,
+      items: about.projects.projects.map((project) => project.title),
     },
   ];
   return (
@@ -77,7 +79,7 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Row fillWidth s={{ direction: "column"}} horizontal="center">
+      <Row fillWidth s={{ direction: "column" }} horizontal="center">
         {about.avatar.display && (
           <Column
             className={styles.avatar}
@@ -94,9 +96,13 @@ export default function About() {
             horizontal="center"
           >
             <Avatar src={person.avatar} size="xl" />
-            <Row gap="8" vertical="center">
+            <Row gap="8" vertical="center" horizontal="between">
+              <Icon onBackground="accent-weak" name="mobile" />
+              {person.mobileNumber}
+            </Row>
+            <Row gap="8" vertical="center" horizontal="between">
               <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
+              {person.state}
             </Row>
             {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
@@ -117,7 +123,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
+            {about.resume.display && (
               <Row
                 fitWidth
                 border="brand-alpha-medium"
@@ -132,14 +138,18 @@ export default function About() {
                   backdropFilter: "blur(var(--static-space-1))",
                 }}
               >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
+                <Badge
+                  background="brand-alpha-weak"
+                  paddingX="12"
+                  paddingY="4"
+                  onBackground="neutral-strong"
+                  textVariant="label-default-s"
+                  arrow={false}
+                >
+                  <Link href={about.resume.link} download>
+                    <Row paddingY="2">{about.resume.title}</Row>
+                  </Link>
+                </Badge>
               </Row>
             )}
             <Heading className={styles.textAlign} variant="display-strong-xl">
@@ -188,35 +198,60 @@ export default function About() {
                           />
                         </Row>
                       </React.Fragment>
-                    ),
+                    )
                 )}
               </Row>
             )}
           </Column>
 
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+            <Column
+              textVariant="body-default-l"
+              fillWidth
+              gap="m"
+              marginBottom="xl"
+            >
               {about.intro.description}
             </Column>
           )}
 
           {about.work.display && (
             <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+              <Heading
+                as="h2"
+                id={about.work.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
                 {about.work.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+                  <Column
+                    key={`${experience.company}-${experience.role}-${index}`}
+                    fillWidth
+                  >
+                    <Row
+                      fillWidth
+                      horizontal="between"
+                      vertical="end"
+                      marginBottom="4"
+                    >
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
                       </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      <Text
+                        variant="heading-default-xs"
+                        onBackground="neutral-weak"
+                      >
                         {experience.timeframe}
                       </Text>
                     </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+                    <Text
+                      variant="body-default-s"
+                      onBackground="brand-weak"
+                      marginBottom="m"
+                    >
                       {experience.role}
                     </Text>
                     <Column as="ul" gap="16">
@@ -229,11 +264,17 @@ export default function About() {
                           >
                             {achievement}
                           </Text>
-                        ),
+                        )
                       )}
                     </Column>
                     {experience.images && experience.images.length > 0 && (
-                      <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
+                      <Row
+                        fillWidth
+                        paddingTop="m"
+                        paddingLeft="40"
+                        gap="12"
+                        wrap
+                      >
                         {experience.images.map((image, index) => (
                           <Row
                             key={index}
@@ -261,16 +302,28 @@ export default function About() {
 
           {about.studies.display && (
             <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+              <Heading
+                as="h2"
+                id={about.studies.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
                 {about.studies.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
+                  <Column
+                    key={`${institution.name}-${index}`}
+                    fillWidth
+                    gap="4"
+                  >
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
                     </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                    <Text
+                      variant="heading-default-xs"
+                      onBackground="neutral-weak"
+                    >
                       {institution.description}
                     </Text>
                   </Column>
@@ -279,37 +332,52 @@ export default function About() {
             </>
           )}
 
-          {about.technical.display && (
+          {about.projects.display && (
             <>
               <Heading
                 as="h2"
-                id={about.technical.title}
+                id={about.projects.title}
                 variant="display-strong-s"
                 marginBottom="40"
               >
-                {about.technical.title}
+                {about.projects.title}
               </Heading>
               <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text id={skill.title} variant="heading-strong-l">
-                      {skill.title}
-                    </Text>
+                {about.projects.projects.map((project, index) => (
+                  <Column key={`${project}-${index}`} fillWidth gap="4">
+                    <Row fillWidth horizontal="between">
+                      <Link href={project.link} target="_blank">
+                        <Text id={project.title} variant="heading-strong-l">
+                          {project.title}
+                        </Text>
+                      </Link>
+                      <Button
+                        href={project.github}
+                        prefixIcon="github"
+                        size="s"
+                        weight="default"
+                        variant="secondary"
+                      />
+                    </Row>
                     <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
+                      {project.description}
                     </Text>
-                    {skill.tags && skill.tags.length > 0 && (
+                    {project.tags && project.tags.length > 0 && (
                       <Row wrap gap="8" paddingTop="8">
-                        {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                        {project.tags.map((tag, tagIndex) => (
+                          <Tag
+                            key={`${project.title}-${tagIndex}`}
+                            size="l"
+                            prefixIcon={tag.icon}
+                          >
                             {tag.name}
                           </Tag>
                         ))}
                       </Row>
                     )}
-                    {skill.images && skill.images.length > 0 && (
+                    {project.images && project.images.length > 0 && (
                       <Row fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
+                        {project.images.map((image, index) => (
                           <Row
                             key={index}
                             border="neutral-medium"

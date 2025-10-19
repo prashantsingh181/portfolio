@@ -1,0 +1,51 @@
+---
+title: "Shopperce - Multi-Tenant E-commerce Platform"
+publishedAt: "2024-10-08"
+summary: "A scalable and configurable multi-tenant eCommerce platform built with React, enabling partners to launch fully branded online stores with unique themes and product catalogs."
+images:
+  - "/images/projects/shopperce/shopperce-01.png"
+  - "/images/projects/shopperce/shopperce-02.png"
+  - "/images/projects/shopperce/shopperce-03.png"
+  - "/images/projects/shopperce/shopperce-04.png"
+team:
+  - name: "Prashant Singh"
+    role: "Frontend Developer"
+    avatar: "/images/avatar.jpeg"
+    linkedIn: "https://www.linkedin.com/in/prashantsingh181/"
+---
+
+## Overview
+
+**Shopperce** is a multi-tenant eCommerce platform built with **React + Vite**, designed to help partners launch their own customized online stores. Each partner can configure their store’s theme, layout, and catalog independently — all powered by a single, flexible frontend codebase.
+
+The goal was to create a reusable, scalable system where multiple brands could run on the same application while maintaining their unique identity and experience.
+
+## Key Features
+
+- **Multi-Tenant Architecture**: Built a dynamic configuration system allowing multiple partners to use the same app with unique themes, routes, and branding.
+- **Dynamic Theming**: Each partner can have a distinct design and UI, loaded dynamically at runtime based on configuration fetched from an API.
+- **Configurable Routing System**: Implemented logic to dynamically import routes and components from theme-specific folders before app initialization.
+- **Reusable Components**: Developed modular UI components adaptable across different themes for consistent functionality and design flexibility.
+- **Product Management**: Integrated product listing, variant handling, and inventory logic for sellers within each partner domain.
+- **Performance Optimizations**: Used lazy loading and dynamic imports to load only the required components for each partner, improving load times.
+- **Error Monitoring**: Integrated Sentry for real-time error tracking and debugging across multiple partner sites.
+
+## Technologies Used
+
+- **React + Vite**: For a fast, modular, and modern frontend setup.
+- **TanStack Query (React Query)**: For efficient data fetching, caching, and synchronization with APIs.
+- **Tailwind CSS**: For flexible and theme-driven styling.
+- **React Router**: For dynamic routing across partner-specific pages.
+- **Sentry**: For monitoring and debugging.
+- **Git + GitHub**: For version control and team collaboration.
+
+## Challenges and Learnings
+
+The main challenge was designing a structure that supports multiple partners with unique UI themes without duplicating logic. This was solved using a **dynamic import and configuration pattern**, allowing each theme to load its own components and styles based on API data.
+
+Additionally, ensuring consistent performance across tenants required optimizing bundle size and caching strategies. Through this, I learned to design scalable React architectures and implement configuration-driven UI systems effectively.
+
+## Outcome
+
+**Shopperce** successfully supports multiple partner storefronts with unique branding, themes, and product catalogs — all running on the same frontend application.  
+It has reduced development overhead for new partners, improved scalability, and provided a flexible foundation for expanding into new markets efficiently.

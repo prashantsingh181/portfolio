@@ -17,7 +17,7 @@ import { NextFontWithVariable } from "next/dist/compiled/@next/font";
  * Display configuration for UI elements.
  */
 export type DisplayConfig = {
-  location: boolean;
+  state: boolean;
   time: boolean;
   themeSwitcher: boolean;
 };

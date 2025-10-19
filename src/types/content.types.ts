@@ -23,6 +23,10 @@ export type Person = {
   avatar: string;
   /** Email address */
   email: string;
+  /** State */
+  state: string;
+  /** Mobile Number */
+  mobileNumber: string;
   /** IANA time zone location */
   location: IANATimeZone;
   /** Languages spoken */
@@ -119,11 +123,12 @@ export interface About extends BasePageConfig {
     display: boolean;
   };
   /** Calendar section configuration */
-  calendar: {
+  resume: {
     /** Whether to display the calendar */
     display: boolean;
     /** Link to the calendar */
     link: string;
+    title: React.ReactNode;
   };
   /** Introduction section */
   intro: {
@@ -178,15 +183,17 @@ export interface About extends BasePageConfig {
     }>;
   };
   /** Technical skills section */
-  technical: {
+  projects: {
     /** Whether to display technical skills section */
     display: boolean;
     /** Title for the technical skills section */
     title: string;
     /** List of technical skills */
-    skills: Array<{
+    projects: Array<{
       /** Skill title */
       title: string;
+      link: string;
+      github: string;
       /** Skill description */
       description?: React.ReactNode;
       /** Skill tags */

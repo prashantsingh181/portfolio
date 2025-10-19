@@ -1,19 +1,30 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+} from "@/types";
+import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Prashant",
+  lastName: "Singh",
+  name: `Prashant Singh`,
+  role: "Software Engineer",
+  avatar: "/images/avatar.jpeg",
+  email: "prashant.singh181@gmail.com",
+  state: "Uttar Pradesh/India",
+  mobileNumber: "+91 9990608554",
+  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -24,18 +35,18 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/prashantsingh181",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/prashantsingh181/",
   },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
+  // {
+  //   name: "Threads",
+  //   icon: "threads",
+  //   link: "https://www.threads.com/@once_ui",
+  // },
   {
     name: "Email",
     icon: "email",
@@ -45,34 +56,29 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/home.png",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Crafting seamless experiences with clean, scalable code</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Download</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          My Resume
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/Prashant-Singh-Frontend-Resume.pdf",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Prashant Singh, a Frontend Developer from India passionate about
+      building dynamic and intuitive web applications using React, Next.js,
+      Javascript and Typescript.
     </>
   ),
 };
@@ -81,7 +87,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from ${person.state}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -89,18 +95,30 @@ const about: About = {
   avatar: {
     display: true,
   },
-  calendar: {
+  resume: {
     display: true,
-    link: "https://cal.com",
+    link: "/Prashant-Singh-Frontend-Resume.pdf",
+    title: (
+      <Row gap="12" vertical="center">
+        <strong className="ml-4">Download</strong>{" "}
+        <Line background="brand-alpha-strong" vert height="20" />
+        <Text marginRight="4" onBackground="brand-medium">
+          My Resume
+        </Text>
+      </Row>
+    ),
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Frontend Developer with 3+ years of experience building scalable,
+        high-performance web applications. Proficient in React, Next.js,
+        TypeScript, and modern JavaScript, with expertise in creating responsive
+        UIs and optimizing performance. Adept at enhancing user experience,
+        collaborating with cross-functional teams, and mentoring junior
+        developers
       </>
     ),
   },
@@ -109,41 +127,83 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Blink Corps",
+        timeframe: "July, 2024 - Present",
+        role: "Software Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Directed the frontend architecture for 3 enterprise-level
+            applications, reducing development time by 25% through modular
+            Next.js components.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Collaborated with UI/UX designers to translate Figma prototypes into
+            responsive, pixel-perfect layouts with Tailwind CSS.
+          </>,
+          <>
+            Mentored 2 junior developers and conducted code reviews to enforce
+            best practices in TypeScript, React, and Next.js.
+          </>,
+          <>
+            Applied performance optimization (bundle analysis, lazy loading,
+            image compression), boosting Lighthouse performance scores by 35%
+            and reducing page load time to under 2s.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "POD IT Services",
+        timeframe: "October, 2023 - June, 2024",
+        role: "Software Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Independently handled frontend development for 3 websites,
+            overseeing the entire process from design implementation to
+            deployment.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Utilized JavaScript, React, Svelte, and other frontend technologies
+            to create responsive and user-friendly interfaces that met client
+            specifications and quality standards.
+          </>,
+          <>
+            Aligned frontend efforts with project objectives in collaboration
+            with backend developers and designers.
+          </>,
+          <>
+            Offered mentorship to 3 recent hires, providing guidance on frontend
+            development best practices, coding standards, and project workflows.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "GlobalLogic Technologies",
+        timeframe: "March, 2022 - July, 2023",
+        role: "Software Engineer",
+        achievements: [
+          <>
+            Developed and maintained frontend components in React and
+            JavaScript, enhancing website functionality and user experience.
+            Implemented new features and optimized existing code to meet project
+            and client requirements.
+          </>,
+          <>
+            Designed and engineered HTML/JavaScript extractors to streamline
+            merchant data extraction, improving task completion speed by 20%.
+          </>,
+          <>
+            Queried and validated data from a database of 2M+ records using SQL
+            to ensure accuracy of extracted information.
+          </>,
+          <>
+            Trained and guided 11 new team members in proprietary tools, defect
+            resolution, and feature implementation
+          </>,
+          <>
+            Recognized for initiative in problem identification, discussion, and
+            resolution.
           </>,
         ],
         images: [],
@@ -155,75 +215,114 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "SRM Institute of Science and Technology",
+        description: (
+          <>
+            Completed Bachelors of Technology in Computer Science and
+            Engineering.
+          </>
+        ),
       },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+      // {
+      //   name: "Build the Future",
+      //   description: <>Studied online marketing and personal branding.</>,
+      // },
     ],
   },
-  technical: {
+  projects: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
+    title: "Projects",
+    projects: [
       {
-        title: "Figma",
+        title: "Busly",
+        link: "https://busly.netlify.app/",
+        github: "https://github.com/prashantsingh181/busly",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Busly is a modern web application built with React + Vite for
+            managing and booking buses. It follows a scalable folder structure
+            with reusable components, context management, utilities, and type
+            safety using TypeScript.
+          </>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "React",
+            icon: "react",
+          },
+          {
+            name: "Vite",
+            icon: "vite",
+          },
+          {
+            name: "Typescript",
+            icon: "typescript",
+          },
+          {
+            name: "Tailwind",
+            icon: "tailwind",
+          },
+          {
+            name: "React Router",
+            icon: "reactrouter",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
+            src: "/images/projects/busly/busly-01.png",
+            alt: "Busly Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/projects/busly/busly-02.png",
+            alt: "Busly Project image",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
+        title: "Build Board",
+        link: "https://build-board-seven.vercel.app/",
+        github: "https://github.com/prashantsingh181/build-board",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            BuildBoard is an article-based platform that lets makers document
+            and share their builds, ideas, and creative processes.
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
           {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Typescript",
+            icon: "typescript",
+          },
+          {
+            name: "Tailwind",
+            icon: "tailwind",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "/images/projects/build-board/build-board-01.png",
+            alt: "Build Board Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/build-board/build-board-02.png",
+            alt: "Build Board Project image",
             width: 16,
             height: 9,
           },
         ],
-      },  
+      },
     ],
   },
 };
@@ -241,7 +340,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

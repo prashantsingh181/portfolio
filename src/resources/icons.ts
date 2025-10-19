@@ -27,9 +27,27 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiTypescript,
+  SiVite,
+  SiReactrouter,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import {
+  FaDiscord,
+  FaGithub,
+  FaLinkedin,
+  FaX,
+  FaThreads,
+  FaXTwitter,
+  FaFacebook,
+  FaPinterest,
+  FaWhatsapp,
+  FaReddit,
+  FaTelegram,
+  FaReact,
+} from "react-icons/fa6";
+import { RiTailwindCssLine } from "react-icons/ri";
+import { FaMobileAlt } from "react-icons/fa";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -50,11 +68,17 @@ export const iconLibrary: Record<string, IconType> = {
   linkedin: FaLinkedin,
   x: FaX,
   twitter: FaXTwitter,
+  mobile: FaMobileAlt,
   threads: FaThreads,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
   javascript: SiJavascript,
+  typescript: SiTypescript,
+  vite: SiVite,
+  tailwind: RiTailwindCssLine,
+  reactrouter: SiReactrouter,
+  react: FaReact,
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,

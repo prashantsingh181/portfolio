@@ -20,12 +20,12 @@ const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  // "/blog": true,
+  // "/gallery": true,
 };
 
 const display: DisplayConfig = {
-  location: true,
+  state: true,
   time: true,
   themeSwitcher: true,
 };
@@ -33,7 +33,7 @@ const display: DisplayConfig = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  // "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
 // Import and set font for each variant
