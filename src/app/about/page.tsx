@@ -235,7 +235,9 @@ export default function About() {
                       fillWidth
                       horizontal="between"
                       vertical="end"
+                      gap="4"
                       marginBottom="4"
+                      s={{ direction: "column", horizontal: "start" }}
                     >
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
@@ -342,7 +344,7 @@ export default function About() {
               >
                 {about.projects.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Column fillWidth style={{ gap: "2.5rem" }}>
                 {about.projects.projects.map((project, index) => (
                   <Column key={`${project}-${index}`} fillWidth gap="4">
                     <Row fillWidth horizontal="between">
