@@ -1,6 +1,8 @@
+// @ts-ignore: side-effect import without type declarations
 import "@once-ui-system/core/css/styles.css";
+// @ts-ignore: side-effect import without type declarations
 import "@once-ui-system/core/css/tokens.css";
-import "@/resources/custom.css";
+// import "@/resources/custom.css";
 
 import classNames from "classnames";
 
@@ -41,7 +43,7 @@ export default async function RootLayout({
         fonts.heading.variable,
         fonts.body.variable,
         fonts.label.variable,
-        fonts.code.variable,
+        fonts.code.variable
       )}
     >
       <head>
@@ -100,6 +102,18 @@ export default async function RootLayout({
                 }
               })();
             `,
+          }}
+        />
+
+        <script
+          id="clarity"
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "ttr0v37ur9");`,
           }}
         />
       </head>
