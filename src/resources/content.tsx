@@ -113,7 +113,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Frontend Developer with 3+ years of experience building scalable,
+        Frontend Developer with around 4 years' of experience building scalable,
         high-performance web applications. Proficient in React, Next.js,
         TypeScript, and modern JavaScript, with expertise in creating responsive
         UIs and optimizing performance. Adept at enhancing user experience,
@@ -127,18 +127,39 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
+        company: "HT Media",
+        timeframe: "Nov, 2025 - Present",
+        role: "Senior Software Engineer",
+        achievements: [
+          <>
+            Spearheaded a large-scale UI/UX revamp of the job portal,
+            modernizing legacy components and improving user navigation, which
+            increased average session duration by 28% and reduced bounce rate by
+            18%.
+          </>,
+          <>
+            Re-engineered critical frontend flows and asset delivery strategies,
+            cutting initial page load time by ~40% and improving Core Web Vitals
+            scores into the “Good” range for 85%+ of key pages.
+          </>,
+          <>
+            Collaborated with product, SEO, and backend teams to streamline
+            search and listing experiences, resulting in a 22% rise in job
+            application conversions and a 30% reduction in reported UI defects
+            post-release.
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: "Blink Corps",
-        timeframe: "July, 2024 - Present",
+        timeframe: "July, 2024 - Nov, 2025",
         role: "Software Engineer",
         achievements: [
           <>
             Directed the frontend architecture for 3 enterprise-level
             applications, reducing development time by 25% through modular
             Next.js components.
-          </>,
-          <>
-            Collaborated with UI/UX designers to translate Figma prototypes into
-            responsive, pixel-perfect layouts with Tailwind CSS.
           </>,
           <>
             Mentored 2 junior developers and conducted code reviews to enforce
@@ -168,10 +189,6 @@ const about: About = {
             specifications and quality standards.
           </>,
           <>
-            Aligned frontend efforts with project objectives in collaboration
-            with backend developers and designers.
-          </>,
-          <>
             Offered mentorship to 3 recent hires, providing guidance on frontend
             development best practices, coding standards, and project workflows.
           </>,
@@ -185,25 +202,19 @@ const about: About = {
         achievements: [
           <>
             Developed and maintained frontend components in React and
-            JavaScript, enhancing website functionality and user experience.
-            Implemented new features and optimized existing code to meet project
-            and client requirements.
+            JavaScript, enhancing website functionality and user experience,
+            while implementing new features and optimizing existing code to meet
+            project and client requirements.
           </>,
           <>
-            Designed and engineered HTML/JavaScript extractors to streamline
-            merchant data extraction, improving task completion speed by 20%.
-          </>,
-          <>
-            Queried and validated data from a database of 2M+ records using SQL
-            to ensure accuracy of extracted information.
+            Designed and engineered HTML/JavaScript extractors and streamlined
+            merchant data extraction, improving task completion speed by 20%,
+            and queried/validated 2M+ SQL records to ensure high data accuracy.
           </>,
           <>
             Trained and guided 11 new team members in proprietary tools, defect
-            resolution, and feature implementation
-          </>,
-          <>
-            Recognized for initiative in problem identification, discussion, and
-            resolution.
+            resolution, and feature implementation, strengthening overall team
+            productivity and delivery quality.
           </>,
         ],
         images: [],
